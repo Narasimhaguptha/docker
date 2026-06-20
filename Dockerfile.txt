@@ -1,0 +1,9 @@
+FROM ubuntu:latest
+
+LABEL Name="server"
+RUN apt update -y
+RUN apt install apache2 -y
+RUN apt install vim -y
+RUN apt install git -y
+
+CMD ["apache2ctl", "-D", "FOREGROUND"]
